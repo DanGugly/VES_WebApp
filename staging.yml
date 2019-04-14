@@ -1,0 +1,12 @@
+version: '3'
+services:
+  web:
+    image: wordpress:latest
+    ports:
+      - "80:80"
+    container_name: wordpress-a4-v2
+    environment:
+      WORDPRESS_DB_HOST: fd1p0pq8v5veam7.c6jbv005fmwy.us-east-1.rds.amazonaws.com:3306
+      WORDPRESS_DB_USER: bloguser
+      WORDPRESS_DB_PASSWORD: password123
+      WORDPRESS_DB_NAME: blog
