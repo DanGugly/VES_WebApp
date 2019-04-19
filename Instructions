@@ -1,1 +1,9 @@
 How to deploy:
+1. Create the ec2 instance
+aws cloudformation create-stack --stack-name Group_5 --template-body file://$PWD/fullstack.yml
+
+2. Login to the instance
+docker -H tcp://52.205.117.191:2375 ps -a
+
+3. Deploy the web app
+docker -f staging.yml up -d && docker ps
